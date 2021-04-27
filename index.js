@@ -1,22 +1,7 @@
 const { response } = require("express");
 const express = require("express");
-
 const app = express();
-
-// Array of movies
 const movies = require("./movies");
-// In codesandbox we need to use the default port which is 8080
-
-// app.get("/api/movies/:id", (request, response) => {
-//   const idMovie = movies.find((item) => {
-//     return item.id === +request.params.id;
-//   });
-//   if (idMovie) {
-//     response.status(200).json(idMovie);
-//   } else {
-//     response.status(404).send("Not found");
-//   }
-// });
 
 app.get("/api/movies/:id", (request, response) => {
   const idMovie = movies.find((item) => {
